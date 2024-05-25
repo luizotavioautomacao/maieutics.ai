@@ -6,3 +6,7 @@ Para executar o arquivo find.ts
 O arquivo sudoku.ts receber o board do sudoku e retornará "sudoku is valid!" ou "sudoku is not valid!"
 Para executar o arquivo sudoku.ts
 - `node sudoku.ts`
+
+Foi criado um projeto C# na pasta C#:
+1. `dotnet new console`
+2. `dotnet run Program.cs`
