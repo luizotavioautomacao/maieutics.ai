@@ -1,0 +1,15 @@
+/home/ubuntu/workspace/maieutics.ai/c#/bin/Debug/net8.0/c#
+/home/ubuntu/workspace/maieutics.ai/c#/bin/Debug/net8.0/c#.deps.json
+/home/ubuntu/workspace/maieutics.ai/c#/bin/Debug/net8.0/c#.runtimeconfig.json
+/home/ubuntu/workspace/maieutics.ai/c#/bin/Debug/net8.0/c#.dll
+/home/ubuntu/workspace/maieutics.ai/c#/bin/Debug/net8.0/c#.pdb
+/home/ubuntu/workspace/maieutics.ai/c#/obj/Debug/net8.0/c#.GeneratedMSBuildEditorConfig.editorconfig
+/home/ubuntu/workspace/maieutics.ai/c#/obj/Debug/net8.0/c#.AssemblyInfoInputs.cache
+/home/ubuntu/workspace/maieutics.ai/c#/obj/Debug/net8.0/c#.AssemblyInfo.cs
+/home/ubuntu/workspace/maieutics.ai/c#/obj/Debug/net8.0/c#.csproj.CoreCompileInputs.cache
+/home/ubuntu/workspace/maieutics.ai/c#/obj/Debug/net8.0/c#.sourcelink.json
+/home/ubuntu/workspace/maieutics.ai/c#/obj/Debug/net8.0/c#.dll
+/home/ubuntu/workspace/maieutics.ai/c#/obj/Debug/net8.0/refint/c#.dll
+/home/ubuntu/workspace/maieutics.ai/c#/obj/Debug/net8.0/c#.pdb
+/home/ubuntu/workspace/maieutics.ai/c#/obj/Debug/net8.0/c#.genruntimeconfig.cache
+/home/ubuntu/workspace/maieutics.ai/c#/obj/Debug/net8.0/ref/c#.dll
