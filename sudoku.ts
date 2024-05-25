@@ -125,14 +125,14 @@ function valid_sudoku(value) {
 
     if (value < 0 || value > 9) {
         isValid = false
-        console.log('is not valid!')
+        console.log('sudoku is not valid!')
     }
 
     if (value !== '.' && memory.hasOwnProperty(value)) {
 
         if (memory[value] === true) {
             isValid = false;
-            console.log('is not valid!')
+            console.log('sudoku is not valid!')
         }
 
         memory[value] = true;
