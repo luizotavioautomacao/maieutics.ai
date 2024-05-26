@@ -10,7 +10,7 @@ let board = [
     [".", ".", ".", ".", "8", ".", ".", "7", "9"]
 ]
 
-let N = 9
+let isValid = true;
 
 let memory = {
     1: false,
@@ -24,88 +24,116 @@ let memory = {
     9: false
 }
 
-let isValid = true;
+isValidSudoku(board)
 
-for (let i = 0; i < N; i++) {
-    reset_memory()
-    for (let j = 0; j < N; j++) {
-        valid_sudoku(board[i][j])
+function valid_sudoku(value) {
+
+    if (value < 0 || value > 9) {
+        isValid = false
+        console.log('is not valid!')
+        return false
+    }
+
+    if (value !== '.' && memory.hasOwnProperty(value)) {
+
+        if (memory[value] === true) {
+            isValid = false;
+            console.log('is not valid!')
+            return false
+        }
+
+        memory[value] = true;
     }
 }
 
-if (isValid) {
+function isValidSudoku(board) {
+    let N = 9
 
-    for (let j = 0; j < N; j++) {
+    for (let i = 0; i < N; i++) {
         reset_memory()
-        for (let i = 0; i < N; i++) {
+        for (let j = 0; j < N; j++) {
             valid_sudoku(board[i][j])
         }
     }
 
-    reset_memory()
-    for (let i = 0; i < 3; i++) {
-        for (let j = 0; j < 3; j++) {
-            valid_sudoku(board[i][j])
+    if (isValid) {
+
+        for (let j = 0; j < N; j++) {
+            reset_memory()
+            for (let i = 0; i < N; i++) {
+                valid_sudoku(board[i][j])
+            }
         }
+
+        reset_memory()
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                valid_sudoku(board[i][j])
+            }
+        }
+
+        reset_memory()
+        for (let i = 0; i < 3; i++) {
+            for (let j = 3; j < 6; j++) {
+                valid_sudoku(board[i][j])
+            }
+        }
+
+        reset_memory()
+        for (let i = 0; i < 3; i++) {
+            for (let j = 6; j < 9; j++) {
+                valid_sudoku(board[i][j])
+            }
+        }
+
+        reset_memory()
+        for (let i = 3; i < 6; i++) {
+            for (let j = 0; j < 3; j++) {
+                valid_sudoku(board[i][j])
+            }
+        }
+
+        reset_memory()
+        for (let i = 3; i < 6; i++) {
+            for (let j = 3; j < 6; j++) {
+                valid_sudoku(board[i][j])
+            }
+        }
+
+        reset_memory()
+        for (let i = 3; i < 6; i++) {
+            for (let j = 6; j < 9; j++) {
+                valid_sudoku(board[i][j])
+            }
+        }
+
+        reset_memory()
+        for (let i = 6; i < 9; i++) {
+            for (let j = 0; j < 3; j++) {
+                valid_sudoku(board[i][j])
+            }
+        }
+
+        reset_memory()
+        for (let i = 6; i < 9; i++) {
+            for (let j = 3; j < 6; j++) {
+                valid_sudoku(board[i][j])
+            }
+        }
+
+        reset_memory()
+        for (let i = 6; i < 9; i++) {
+            for (let j = 6; j < 9; j++) {
+                valid_sudoku(board[i][j])
+            }
+        }
+
     }
 
-    reset_memory()
-    for (let i = 0; i < 3; i++) {
-        for (let j = 3; j < 6; j++) {
-            valid_sudoku(board[i][j])
-        }
-    }
+    else return false
 
-    reset_memory()
-    for (let i = 0; i < 3; i++) {
-        for (let j = 6; j < 9; j++) {
-            valid_sudoku(board[i][j])
-        }
-    }
-
-    reset_memory()
-    for (let i = 3; i < 6; i++) {
-        for (let j = 0; j < 3; j++) {
-            valid_sudoku(board[i][j])
-        }
-    }
-
-    reset_memory()
-    for (let i = 3; i < 6; i++) {
-        for (let j = 3; j < 6; j++) {
-            valid_sudoku(board[i][j])
-        }
-    }
-
-    reset_memory()
-    for (let i = 3; i < 6; i++) {
-        for (let j = 6; j < 9; j++) {
-            valid_sudoku(board[i][j])
-        }
-    }
-
-    reset_memory()
-    for (let i = 6; i < 9; i++) {
-        for (let j = 0; j < 3; j++) {
-            valid_sudoku(board[i][j])
-        }
-    }
-
-    reset_memory()
-    for (let i = 6; i < 9; i++) {
-        for (let j = 3; j < 6; j++) {
-            valid_sudoku(board[i][j])
-        }
-    }
-
-    reset_memory()
-    for (let i = 6; i < 9; i++) {
-        for (let j = 6; j < 9; j++) {
-            valid_sudoku(board[i][j])
-        }
-    }
-
-}
+    return true
+} 
 
 function reset_memory() {
     memory = {
@@ -118,24 +146,6 @@ function reset_memory() {
         7: false,
         8: false,
         9: false
-    }
-}
-
-function valid_sudoku(value) {
-
-    if (value < 0 || value > 9) {
-        isValid = false
-        console.log('sudoku is not valid!')
-    }
-
-    if (value !== '.' && memory.hasOwnProperty(value)) {
-
-        if (memory[value] === true) {
-            isValid = false;
-            console.log('sudoku is not valid!')
-        }
-
-        memory[value] = true;
     }
 }
 
